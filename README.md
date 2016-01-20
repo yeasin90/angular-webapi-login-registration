@@ -1,2 +1,6 @@
 # angular-webapi-login-registration
-Simple Login-Registration with AngularJs and ASP.NET Web Api
+Code example for Login and Registraion with AngularJs and Web Api. Topics :
+* Login
+* Registraion
+* Product List
+* Add/Edit Product
