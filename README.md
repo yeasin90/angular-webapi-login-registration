@@ -1,5 +1,5 @@
-# angular-webapi-login-registration
-Code example for Login and Registraion with AngularJs and Web Api. Topics :
+# Simple Login-Registraion-CRUD with AngularJs and WebApi
+Topics :
 * Login
 * Registraion
 * Product List
