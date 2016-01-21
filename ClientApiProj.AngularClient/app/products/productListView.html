@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="panel-heading"
+         style="font-size:large">
+        Product List
+
+        <a class="btn btn-success" href="#/products/create">Add new product</a>
+    </div>
+
+    <div class="panel-body">
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <td>Product</td>
+                    <td>Code</td>
+                    <td>Available</td>
+                    <td>Price</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="product in vm.products">
+                    <td>{{ product.productName}}</td>
+                    <td>{{ product.productCode }}</td>
+                    <td>{{ product.releaseDate | date }}</td>
+                    <td>{{ product.price | currency }}</td>
+                    <td><a ng-href="#/products/{{product.productId}}">Edit</a> <a ng-href="/delete/{{product.productId}}">Delete</a></td> <!-- href vs ngHref : https://docs.angularjs.org/api/ng/directive/ngHref -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

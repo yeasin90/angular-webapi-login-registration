@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Acme Product Management</title>
+
+    <!-- Style sheets -->
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body ng-app="productManagement">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Acme Product Management</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ng-include vs ng-view : http://stackoverflow.com/questions/20025101/how-to-decide-when-to-use-ngview-or-nginclude -->
+    <div ng-view="" class="container">
+
+    </div>
+
+    <!--
+    <div class="container">
+        <div ng-include="'app/products/productListView.html'"></div>
+    </div>--->
+
+    <!-- Library Scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="Scripts/angular-resource.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+
+    <!-- Application Script -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="common/common.services.js"></script>
+    <script src="common/productResource.js"></script>
+    <script src="common/userAccountResource.js"></script>
+    <script src="common/tokenContainer.js"></script>
+    <script src="common/currentUser.js"></script>
+
+    <!-- Product Controllers -->
+    <script src="app/products/productListCtrl.js"></script>
+    <script src="app/products/productEditCtrl.js"></script>
+    <script src="app/products/productCreateCtrl.js"></script>
+    <script src="app/membership/membershipController.js"></script>
+
+</body>
+
+</html>

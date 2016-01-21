@@ -1,0 +1,8 @@
+﻿# Add an Empty Solution. File -> Project -> Other Project Types -> Empty Solution
+# Right click on solution. Click Add -> New Web Site
+# Add nuget package : AngularJs Core
+# Add nuget pakcgae : boostrap
+# Add nuget package : AngularJS Resource
+# Add nuget package : AngularJS route for Angular Routing
+# Add a file in root : index.html
+# Make sure to add a Json Serialize Formatter in WebApiConfig.cs in WebApi server, as we are accessing json in lower case.

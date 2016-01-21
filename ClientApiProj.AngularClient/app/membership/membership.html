@@ -1,0 +1,81 @@
+﻿
+
+<div class="container-fluid">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div ng-show="vm.message">{{vm.message}}</div>
+        </div>
+
+        <div class="col-md-4">
+            <h2 class="leftMarginSmaller">Log in</h2>
+            <div class="form-group">
+                <label for="loginEmail">Username</label>
+                <input type="text" id="loginEmail" class="form-control" placeholder="Username (email)" ng-model="vm.userData.email">
+            </div>
+            <div class="form-group">
+                <label for="loginPass">Password</label>
+                <input type="password" id="loginPass" class="form-control" placeholder="Password" ng-model="vm.userData.password">
+            </div>
+
+            <div class="checkbox">
+                <label><input type="checkbox"> Remember me</label>
+            </div>
+            <button type="submit" class="btn btn-primary" ng-click="vm.login()">Login</button>
+        </div>
+
+        <div class="col-md-4">
+            <h2 class="leftMarginSmaller">Registration</h2>
+            <div class="form-group">
+                <label for="regEmail">Username</label>
+                <input type="text" class="form-control" id="regEmail" placeholder="Username (email)" ng-model="vm.userData.email">
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input type="password" class="form-control" id="regPassword" placeholder="Password" ng-model="vm.userData.password">
+            </div>
+
+            <button type="submit" class="btn btn-primary" ng-click="vm.registerUser()">Submit</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--<div class="form-horizontal leftMarginDefault">
+
+    <div class="form-group">
+        <div>
+            Your username
+        </div>
+        <div>
+            <input type="text" class="form-control" ng-model="vm.credentials.username">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div>
+            Your password
+        </div>
+        <div>
+            <input type="password" class="form-control" ng-model="vm.credentials.password">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div>{{vm.loginError}}</div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <button class="btn btn-default"
+                    ng-click="vm.submit()">
+                Log in
+            </button>
+        </div>
+    </div>
+
+
+</div>-->

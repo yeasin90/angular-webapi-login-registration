@@ -1,0 +1,20 @@
+﻿# Right Click on Solution
+# Then, Add -> New Project -> ASP.NET Web Application -> Web Api (Leave the authentication as Individual Authentication)
+# Press OK
+# For internal Data source, add product.json under App_Data
+# Add a Wep Api 2 Empty Controller, ProductsController
+# Add two classes under Model : Product and ProductRepository
+# Add nuget : ASP.NET Web Api cors
+# Go to App_Start -> WebApiConfig.cs and add : config.EnableCors()
+# Add a Json Serialize Formatter in WebApiConfig.cs : config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+   In WepApi model, our property names are CamelCase. But in Angular client, we are using first letter in lower case. 
+# Add :  context.OwinContext.Response.Headers.Add("Access-Control-Allow-Origin",
+                                new[] { "http://localhost:6151" });
+		in Providers -> ApplicationOAuthProvider.cs
+# ********** VVI ***************************
+- DON'T nuget : ASP.NET Web Api cors, DO nuget : Owin.Cors
+- Remove ASP.NET Web Api cors attribute from controllers and WebApiConfig.cs's config.EnableCors()
+- Use Owin.Cors's app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll); in Startup.cs
+- This is because, every request will pass through Startup.cs which is a component of Owin
+- So, cors should be enabled via Owin.Cors
+- Reference : http://stackoverflow.com/questions/26725866/cors-on-owin-and-accessing-token-causes-access-control-allow-origin-error

@@ -1,0 +1,9 @@
+﻿# rigth click on solution node
+# Add New Project -> ASP.NET Web Application -> Empty projet
+# Enable SSL for this project
+# Copy the SSL url to Project startup (Properties -> Web -> Project Url)
+# Add <system.webServer><modules runAllManagedModulesForAllRequests="true"></modules></system.webServer> in WebConfig
+# nuget : microsoft.owin.host.systemweb
+# Add Startup.cs
+# nuget, install from Nuget Package manager console : install-package IdentityServer3
+# Add Config folder and Add a Users class to it (for in-memory user)
